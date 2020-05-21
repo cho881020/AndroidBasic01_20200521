@@ -24,6 +24,14 @@ public class MainActivity extends AppCompatActivity {
 //  이벤트 처리 코드 모아두는 곳
     void setupEvents() {
 
+        binding.goToSecondBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(myIntent);
+            }
+        });
+
         binding.goToFirstBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
